@@ -98,5 +98,13 @@ function! niji#highlight()
 	endfor
 endfunction
 
+function! niji#load()
+	if count(g:niji#matching_filetypes, &ft) > 0
+		call niji#highlight()
+	endif
+endfunction
+
+let g:niji#matching_filetypes = get(g:, 'niji#matching_filetypes', ['lisp', 'scheme', 'clojure'])
+
 let &cpo = s:save_cpo
 unlet s:save_cpo
