@@ -17,7 +17,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 let g:niji#matching_filetypes = get(g:, 'niji#matching_filetypes', ['lisp', 'scheme', 'clojure'])
-let g:niji#use_legacy_colours = get(g:, 'niji#use_legacy_colours, 0)
+let g:niji#use_legacy_colours = get(g:, 'niji#use_legacy_colours', 0)
 
 let g:niji#matching_characters = get(g:, 'niji#matching_characters', [
 			\		['(', ')'],
