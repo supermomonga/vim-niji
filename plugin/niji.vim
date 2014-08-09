@@ -20,5 +20,8 @@ if exists("g:loaded_niji")
 endif
 let g:loaded_niji = 1
 
+augroup niji
+	autocmd!
+	autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost * nested call niji#load()
+augroup END
 
-autocmd BufNewFile,BufReadPost,FilterReadPost,FileReadPost * nested call niji#load()
